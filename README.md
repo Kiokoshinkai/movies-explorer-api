@@ -4,8 +4,8 @@
 Адрес репозитория: https://github.com/Kiokoshinkai/movies-explorer-api
 
 ## Ссылки на проект
-IP
+IP 62.84.113.99
 
-Frontend
+Frontend https://vvg.nomoredomainsicu.ru/
 
-Backend
+Backend https://api.vvg.nomoredomainsicu.ru/
