@@ -16,10 +16,10 @@ mongoose.connect(DB_URL, {
   useNewUrlParser: true,
 });
 const allowedOrigins = [
-  'https://vvg.nomoredomainsicu.ru',
-  'https://api.vvg.nomoredomainsicu.ru',
-  'http://vvg.nomoredomainsicu.ru',
-  'http://api.vvg.nomoredomainsicu.ru',
+  'https://vvg.nomoredomainsrocks.ru',
+  'https://api.vvg.nomoredomainsrocks.ru',
+  'http://vvg.nomoredomainsrocks.ru',
+  'http://api.vvg.nomoredomainsrocks.ru',
   'localhost:3000',
 ];
 
