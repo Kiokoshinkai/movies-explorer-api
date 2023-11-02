@@ -6,6 +6,6 @@
 ## Ссылки на проект
 IP 62.84.113.99
 
-Frontend https://vvg.nomoredomainsrocks.ru/
+Frontend https://vvg.nomoredomainsrocks.ru
 
-Backend https://api.vvg.nomoredomainsrocks.ru/
+Backend https://api.vvg.nomoredomainsrocks.ru
