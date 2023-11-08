@@ -9,7 +9,7 @@ const routes = require('./routes/index');
 const errorHandler = require('./middlewares/error-handler');
 const { limiter } = require('./middlewares/rateLimiter');
 
-const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/filmsdb' } = process.env;
+const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 const app = express();
 
 mongoose.connect(DB_URL, {
