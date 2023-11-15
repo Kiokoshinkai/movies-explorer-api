@@ -19,16 +19,19 @@ const createUser = (req, res, next) => {
 
   // Хешируем пароль и создаем пользователя
   bcrypt.hash(password, 10)
-    .then((hash) => User.create({
-      name,
-      email,
-      password: hash,
-    }))
-    .then((user) => {
-      res.status(200).send({
-        _id: user._id, name: user.name, email: user.email,
+    .then((hash) => {
+      console.log('Hash сгенерирован:', hash);
+      return User.create({
+        name,
+        email,
+        password: hash,
       });
     })
+    .then((user) => res.status(201).send({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+    }))
     .catch((error) => {
       if (error.name === 'MongoServerError' && error.code === 11000) {
         const conflictError = new ConflictError('Пользователь с таким email уже существует');
