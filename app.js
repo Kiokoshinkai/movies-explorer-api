@@ -16,23 +16,15 @@ mongoose.connect(DB_URL, {
   useNewUrlParser: true,
 });
 
-const allowedOrigins = [
-  'https://vvg.nomoredomainsrocks.ru/',
-  'https://api.vvg.nomoredomainsrocks.ru/',
-  'http://vvg.nomoredomainsrocks.ru/',
-  'http://api.vvg.nomoredomainsrocks.ru/',
-  'http://localhost:3000',
-];
+// const allowedOrigins = [
+//   'https://vvg.nomoredomainsrocks.ru/',
+//   'https://api.vvg.nomoredomainsrocks.ru/',
+//   'http://vvg.nomoredomainsrocks.ru/',
+//   'http://api.vvg.nomoredomainsrocks.ru/',
+//   'http://localhost:3000',
+// ];
 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-}));
+app.use(cors());
 
 app.use(helmet());
 app.use(express.json());
