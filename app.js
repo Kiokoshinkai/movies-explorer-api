@@ -20,7 +20,7 @@ const allowedOrigins = [
   'https://api.vvg.nomoredomainsrocks.ru',
   'http://vvg.nomoredomainsrocks.ru',
   'http://api.vvg.nomoredomainsrocks.ru',
-  'localhost:3000',
+  'http://localhost:3000',
 ];
 
 app.use(cors({
@@ -36,7 +36,7 @@ app.use(cors({
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(requestLogger); // подключаем логгер запросов
+app.use(requestLogger); // Подключаем логгер запросов
 app.use(limiter);
 app.use(routes); // подключаем роуты
 
