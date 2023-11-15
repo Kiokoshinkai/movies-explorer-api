@@ -33,7 +33,7 @@ const createUser = (req, res, next) => {
       email: user.email,
     }))
     .catch((error) => {
-      if (error.name === 'MongoServerError' && error.code === 11000) {
+      if (error.code === 11000) {
         const conflictError = new ConflictError('Пользователь с таким email уже существует');
         next(conflictError);
       } else if (error.name === 'ValidationError') {
